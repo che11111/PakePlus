@@ -1,0 +1,7 @@
+.news-story__header {
+  display: flex;
+  justify-content: space-between;
+}
+.search-result {
+  padding-left: 20px;
+}
