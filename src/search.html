@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 510px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 930px)">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-16x16.ico">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-32x32.ico">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-48x48.ico">
+    <title>Search Results - Eyefind</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-searchbar">
+        <div class="header-content__media">
+            <a href="./index.html">
+              <img src="./assets/img/eyefind-info.png" alt="eyefind.info logo">
+            </a>
+        </div>
+        <form action="./search.html" method="get" class="header-searchbar__input">
+          <span class="magnifier"></span>
+          <input type="text" name="q" placeholder="Search Bing" value="">
+        </form>
+        <div class="header-searchbar__button">
+          <a href="#" class="random" onclick="document.forms[0].submit(); return false;">Search</a>
+        </div>
+      </section>
+    </header>
+    <main>
+      <div class="search-container">
+      <iframe id="bing-frame" src="" frameborder="0"></iframe>
+    </div>
+    </main>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const query = urlParams.get('q');
+      
+      if(query) {
+        document.querySelector('input[name="q"]').value = query;
+        document.getElementById('bing-frame').src = `https://www.bing.com/search?q=${encodeURIComponent(query)}`;
+      }
+      
+      // Auto-resize iframe to fit content
+      window.addEventListener('message', function(e) {
+        if(e.data && e.data.height) {
+          document.getElementById('bing-frame').style.height = e.data.height + 'px';
+        }
+      });
+    </script>
+  </body>
+</html>
