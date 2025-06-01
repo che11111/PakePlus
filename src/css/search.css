@@ -1,0 +1,36 @@
+.search-container {
+  margin: 0 auto;
+}
+
+header {
+  height: 85px !important;
+}
+
+.header-content {
+  height: 40px !important;
+}
+
+.header-searchbar {
+  margin-bottom: 10px !important;
+}
+
+
+.search-container iframe {
+  width: 100%;
+  height: calc(100vh - 85px);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 929px) {
+  .search-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 509px) {
+  .search-container {
+    padding: 10px;
+  }
+}
