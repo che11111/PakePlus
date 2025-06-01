@@ -1,22 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="The search engine that knows everything about you, mostly because it drives around in cars collecting all your private data"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://raw.githubusercontent.com/esparev/eyefind.info/master/assets/img/eyefind-info-preview.png">
+    <meta property="og:url" content="https://esparev.github.io/eyefind.info/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Eyefind">
+    <meta property="og:description" content="The search engine that knows everything about you, mostly because it drives around in cars collecting all your private data">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 510px)">
+    <link rel="stylesheet" href="./css/desktop.css" media="(min-width: 930px)">
+    <title>Eyefind</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-content">
+        <div class="header-content__media">
+          <a href="./index.html">
+            <img src="./assets/img/eyefind-info.png" alt="eyefind.info logo">
+          </a>
+        </div>
+        <div class="header-content__info">
+          <div class="header-content__info--text">
+            <p class="location">Vinewood Hills</p>
+            <p class="day">Sun</p>
+          </div>
+          <div class="header-content__info--icon">
+            <span class="weather"></span>
+          </div>
+        </div>
+      </section>
+      <section class="header-searchbar">
+        <form action="https://www.bing.com/search" method="get" class="header-searchbar__input">
+          <span class="magnifier"></span>
+          <input type="text" name="q" placeholder="Search Bing">
+        </form>
+        <div class="header-searchbar__button">
+          <a href="#" class="random" onclick="document.forms[0].submit(); return false;">Search</a>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="main-categories-container">
+        <div class="categories-container">
+          <div class="categories-container__section">
+            <a class="categories--link" href="#">
+              <span class="categories-container--icon smartphone"></span>
+              <p>Media and <br> Entertainment</p>
+            </a>
+          </div>
+          <span class="vl"></span>
+          <div class="categories-container__section">
+            <a class="categories--link" href="#">
+              <span class="categories-container--icon fast-food"></span>
+              <p>Food <br> and Drink</p>
+            </a>
+          </div>
+          <span class="vl"></span>
+          <div class="categories-container__section">
+            <a class="categories--link" href="#">
+              <span class="categories-container--icon dollar"></span>
+              <p>Money <br> and Services</p>
+            </a>
+          </div>
+          <span class="vl"></span>
+          <div class="categories-container__section">
+            <a class="categories--link" href="#">
+              <span class="categories-container--icon plane"></span>
+              <p>Travel <br> and Transport</p>
+            </a>
+          </div>
+          <span class="vl"></span>
+          <div class="categories-container__section">
+            <a class="categories--link" href="#">
+              <span class="categories-container--icon shopping-bag"></span>
+              <p>Fashion <br> and Health</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="main-container">
+        <div class="news-website-container">
+          <section class="news-story">
+            <div class="news-story__header">
+              <div class="news-story__header--info">
+                <h2>News story of the day</h2>
+                <p>Cult crazy flees with cash.</p>
+              </div>
+              <div class="news-story__header--img">
+                <span></span>
+              </div>
+            </div>
+            <p>Mike Dunn - Daily Globe</p>
+            <p>It has been a bizarre few weeks for the Epsilon Program. Reports indicate Epsilon's founder and leader, Cris Formage, has absconded amid accusation of a car theft.</p>
+            <a class="read-article" href="">Read full article</a>
+          </section>
+          <section class="website-minute">
+            <h2>Website of the minute</h2>
+            <div class="website-minute__content">
+              <div class="website-minute__content--img">
+                <img src="" alt="">
+              </div>
+              <div class="website-minute__content--text">
+                <a href="">www.universaluniform.net</a>
+                <p>We are a clothing company that is uniquely American - we sexily advertise bland t-shirts by putting them on half dizzy sluts still woozy from a night of pounding.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <section class="sidebar">
+          <div class="sidebar__advert">
+            <a class="sidebar__advert--clickable" href="">
+              <p>Sponsored Advert</p>
+              <img src="./assets/img/dynasty8-advert.png" alt="Advert">
+            </a>
+          </div>
+          <div class="sidebar__bleets">
+            <a class="sidebar__bleets--clickable" href="">
+              <div class="bleets__header">
+                <span></span>
+                <h2>Recent Bleets</h2>
+              </div>
+              <div class="bleets__text">
+                <a href="">@sarahboptician</a>
+                <p>Could someone please give me directions to my happy place?</p>
+                <hr>
+                <a href="">@slappaball2</a>
+                <p>#Themostridiculouslylonghashtagever</p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </section>
+      <section class="eyefind-featured">
+        <h2>Eyefind featured websites</h2>
+        <div class="eyefind-featured__websites">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+      </section>
+    </main>
+    <footer>
 
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
-
-            <form class="row" id="greet-form">
-                <input id="greet-input" placeholder="Enter a name..." />
-                <button type="submit">Greet</button>
-            </form>
-            <p id="greet-msg"></p>
-        </main>
-    </body>
+    </footer>
+  </body>
 </html>
